@@ -1,0 +1,19 @@
+# Eclipse
+.project
+.classpath
+.settings
+bin
+
+# IntelliJ IDEA
+/.idea
+/home.iml
+
+# Maven
+target
+
+# Gradle
+.gradle
+build
+
+# Spring
+.springBeans

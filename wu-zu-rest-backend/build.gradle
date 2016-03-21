@@ -22,14 +22,13 @@ apply plugin: 'idea'
 apply plugin: 'spring-boot'
 
 dependencies {
-    /* MVC */
-    compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
-    //compile("org.springframework.boot:spring-boot-starter-jdbc:$springBootVersion")
+    /* REST API framework */
+    compile("org.springframework.boot:spring-boot-starter-data-rest:$springBootVersion")
     
-    /* Persistence */
+    /* Persistence framework */
     compile("org.springframework.boot:spring-boot-starter-data-jpa:$springBootVersion")
     
-    /* Test */
+    /* Test framework */
     testCompile("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
     testCompile 'com.jayway.restassured:rest-assured:2.9.0'
     

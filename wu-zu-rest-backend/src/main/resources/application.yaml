@@ -1,0 +1,30 @@
+spring:
+  profiles:
+    active: local
+  jpa:
+    database-platform: org.hibernate.dialect.HSQLDialect
+
+---
+
+spring:
+  profiles: local
+  datasource:
+    driverClassName: net.sf.log4jdbc.DriverSpy
+    url: jdbc:log4jdbc:h2:mem:board;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: 
+  jpa:
+    database: H2
+    hibernate:
+      ddl-auto: create-drop
+
+---
+
+spring:
+  profiles: prod
+  datasource:
+    type: org.apache.tomcat.jdbc.pool.DataSource
+    driverClassName: com.mysql.jdbc.Driver
+    jndi-name: java:comp/env/board
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL57InnoDBDialect

@@ -33,10 +33,12 @@ dependencies {
     testCompile 'com.jayway.restassured:rest-assured:2.9.0'
     
     /* Code generation */
-    compile group: 'org.projectlombok', name: 'lombok', version:'1.16.6'
+    compile 'org.projectlombok:lombok:1.16.6'
     
     /* JDBC */
-    compile 'mysql:mysql-connector-java:5.1.38'
+    compile 'com.h2database:h2:1.4.191'
+    //compile 'mysql:mysql-connector-java:5.1.38'
+    //compile 'org.apache.tomcat:tomcat-dbcp:8.0.32'
     compile 'org.lazyluke:log4jdbc-remix:0.2.7' // for SQL log
 }
 

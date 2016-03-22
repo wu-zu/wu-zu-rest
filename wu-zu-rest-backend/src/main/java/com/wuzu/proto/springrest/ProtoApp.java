@@ -12,13 +12,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author Hyungchae Kim
  */
 @SpringBootApplication
-public class Application {
+public class ProtoApp {
 
     @Autowired
     private HeroesRepository repository;
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(ProtoApp.class, args);
 	}
 
     @PostConstruct

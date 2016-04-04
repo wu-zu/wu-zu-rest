@@ -2,7 +2,7 @@ spring:
   profiles:
     active: local
   jpa:
-    database-platform: org.hibernate.dialect.HSQLDialect
+    database-platform: org.hibernate.dialect.H2Dialect
 
 ---
 
@@ -10,13 +10,14 @@ spring:
   profiles: local
   datasource:
     driverClassName: net.sf.log4jdbc.DriverSpy
-    url: jdbc:log4jdbc:h2:mem:board;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:log4jdbc:h2:mem:board;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=TRUE
     username: sa
     password: 
   jpa:
     database: H2
     hibernate:
-      ddl-auto: create-drop
+      hbm2ddl:
+        ddl-auto: create
 
 ---
 
